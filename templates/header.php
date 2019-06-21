@@ -58,4 +58,3 @@ if (valider("connecte","SESSION"))
 </div>
 
 
-</body>

@@ -14,15 +14,25 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
     die("");
 }
 
-// on distingue le cas connecté du cas non connecté
+
+include("header.php");
 
 // On gardera dans tous les cas le classement et commandes
+
+
+
 
 if (valider("connecte","SESSION")){
 
     // on ajoute un bouton jouer & profil
 
-    echo
+    echo "<form method=\"get\" action=\"index.php?view=jouer\>";
+    echo '<button class="boutton" type=\"submit\">Jouer</button>';
+    echo '</form>';
+
+    echo "<form method=\"get\" action=\"index.php?view=profil\>";
+    echo '<button class="boutton" type=\"submit\">Profil</button>';
+    echo '</form>';
 
 }
 
@@ -30,5 +40,34 @@ else{
 
     // on ajoute un bouton connexion / s'inscrire
 
+    echo "<form method=\"get\" action=\"index.php?view=connexion\>";
+    echo '<button class="boutton" type=\"submit\">Connexion</button>';
+    echo '</form>';
+
+    echo "<form method=\"get\" action=\"index.php?view=inscription\>";
+    echo '<button class="boutton" type=\"submit\">Inscription</button>';
+    echo '</form>';
+
+
 }
+
+
+
+// on affiche les boutons classement et commandes
+
+    echo"<div id='listeBouttons'>";
+    echo "<form method=\"get\" action=\"index.php?view=classement\>";
+    echo '<button class="boutton" type=\"submit\">Classement</button>';
+    echo '</form>';
+
+    echo "<form method=\"get\" action=\"index.php?view=commandes\>";
+    echo"<button class='boutton' type=\"submit\">Commandes</button>";
+    echo "</form>";
+
+
+
+echo "</div>";
+
+include("footer.php");
 ?>
+

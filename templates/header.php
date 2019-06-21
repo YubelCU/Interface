@@ -35,7 +35,6 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 </div>
 
 
-
 <?php
 // Si l'utilisateur est connecté, on affiche le pseudo et un input déconnexion
 if (valider("connecte","SESSION"))
@@ -54,7 +53,5 @@ if (valider("connecte","SESSION"))
 
 ?>
 
-
-</div>
 
 

@@ -20,7 +20,7 @@ include("header.php");
 // On gardera dans tous les cas le classement et commandes
 
 
-
+echo"<div class=listeBouttons>";
 
 if (valider("connecte","SESSION")){
 

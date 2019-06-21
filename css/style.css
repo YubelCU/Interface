@@ -68,13 +68,15 @@ body{
 
 }
 
-#listeBouttons{
+.listeBouttons{
 	vertical-align:middle;
 	position:relative;
-
 	padding:1vw;
-	margin:4vw 35vw;
+	margin:4vw 30vw;
 	text-align:center;
+	font-family: funky;
+	font-size:2vw;
+
 
 }
 .boutton{
@@ -85,7 +87,12 @@ body{
 	border:0.1vw solid gray;
 	font-family:funky;
 	font-size:2vw;
-
-
 }
 
+.textInp{
+	border-radius:1vw;
+	border:0.05vw solid black;
+	width:15vw;
+	height:2vw;
+
+}

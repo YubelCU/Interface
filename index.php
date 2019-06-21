@@ -32,6 +32,7 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
 
 	if (file_exists("templates/$view.php"))
 		include("templates/$view.php");
+
 	else echo"<h1> Rien à afficher ! </h1>";
 
 

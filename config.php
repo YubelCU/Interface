@@ -1,0 +1,7 @@
+<?php
+
+$BDD_host="localhost";
+$BDD_user="root";
+$BDD_password="root";
+$BDD_base="Web 2019"; // nom de la base de données
+?>

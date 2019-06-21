@@ -1,0 +1,85 @@
+@font-face {
+	src: url(../ressources/fonts/ShadowsIntoLight.ttf);
+	font-family:funky;
+}
+
+@font-face {
+	src: url(../ressources/fonts/FrederickatheGreat-Regular.ttf);
+	font-family:nos;
+}
+
+body{
+	margin:0px;
+}
+
+#banniere{
+	border-bottom: solid black;
+	position:relative;
+	height:20%;
+	background-color: #afd9ee;
+
+}
+
+#logo{
+	width:8vw;
+	height:auto;
+	position:absolute;
+	top:1vw;
+	left:4vw;
+}
+
+#nomJeu{
+	position:absolute;
+	left:18vw;
+	top:1.6vw;
+	color:black;
+	font-weight:bold;
+	font-size:5vw;
+	font-family:nos;
+
+
+}
+#deconnexion{
+
+	position:absolute;
+	width:7vw;
+	height:2vw;
+	border-radius:8vw;
+	font-size:1vw;
+	text-align: center;
+	text-decoration: none;
+	padding:0.15vw;
+	border:0.1vw dashed gray;
+	font-family:funky;
+	bottom:4.5vw;
+	right:6vw;
+
+}
+
+#nomUtilisateur{
+
+	position:absolute;
+	width:7vw;
+	height:2vw;
+	font-family:funky;
+	font-size:2vw;
+	top:2.8vw;
+	right:15vw;
+
+}
+
+#listeBouttons{
+	vertical-align:middle;
+	position:relative;
+	border:0.05vw solid gray;
+	padding:1vw;
+	margin:4vw 35vw;
+	text-align:center;
+
+}
+.boutton{
+	color:red;
+	border:0.05vw solid gray;
+
+}
+

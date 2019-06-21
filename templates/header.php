@@ -29,7 +29,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 <body>
 
 <div id="banniere">
-    <img id="logo" src="ressources/point-interrogation.jpg">
+    <img id="logo" src="ressources/pacman.jpg">
     <div id="nomJeu">PACMAN</div>
 
 </div>

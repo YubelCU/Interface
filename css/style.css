@@ -10,13 +10,25 @@
 
 body{
 	margin:0px;
+	background-color:#c7ddef;
+	/*
+
+	Couleur du background à débattre
+
+	*/
+
 }
 
 #banniere{
 	border-bottom: solid black;
 	position:relative;
-	height:20%;
-	background-color: #afd9ee;
+	height:10vw;
+	background-color:#fafafa;
+	/*
+
+	Couleur du background à débattre
+
+	*/
 
 }
 

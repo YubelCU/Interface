@@ -71,15 +71,21 @@ body{
 #listeBouttons{
 	vertical-align:middle;
 	position:relative;
-	border:0.05vw solid gray;
+
 	padding:1vw;
 	margin:4vw 35vw;
 	text-align:center;
 
 }
 .boutton{
-	color:red;
 	border:0.05vw solid gray;
+	width:18vw;
+	height:4vw;
+	border-radius:8vw;
+	border:0.1vw solid gray;
+	font-family:funky;
+	font-size:2vw;
+
 
 }
 

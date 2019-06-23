@@ -10,6 +10,9 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
  include_once("libs/modele.php");
  include_once("libs/maLibUtils.php");
  include_once("libs/maLibForms.php");
+ include_once("libs/LibJules.php");
+
+ $idUtilisateur = "0"; //modifier paramètre par l'id de l'utilisateur connecté
 
 //Si l'utilisateur n'est pas connecté mais arrive à cette page, on lui propose d'aller se connecter
 //if (valider("connecte","SESSION") == false)
@@ -55,10 +58,33 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
            <div id='profilHistorique' class='profil'>
                <h1>Historique</h1>
+
+    ";
+
+    $historique = listerParties($idUtilisateur);
+    afficherHistorique($historique,$idUtilisateur);  //modifier paramètre par l'id de l'utilisateur connecté
+    echo "
            </div>
 
            <div id='profilStats' class='profil'>
                <h1>Tes statistiques</h1>
+    ";
+    echo "Nombres de parties jouées : ";
+    echo NbParties($idUtilisateur);
+    echo "<br/>";
+    echo "Parties jouées en tant que Pacman : ";
+    echo NbPartiesPacman($idUtilisateur);
+    echo "<br/>";
+    echo "Parties jouées en tant que Fantôme : ";
+    echo NbPartiesFantomes($idUtilisateur);
+    echo "<br/>";
+    echo "Victoires : ";
+    echo victoires($idUtilisateur);
+    echo "<br/>";
+    echo "Meilleur score : ";
+    $tab = listerParties($idUtilisateur);
+    HighScore($tab,$idUtilisateur);
+    echo "
 
            </div>
      ";

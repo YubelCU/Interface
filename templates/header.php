@@ -30,8 +30,28 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 
 <div id="banniere">
     <img id="logo" src="ressources/pacman.jpg">
-    <div id="nomJeu">PACMAN</div>
+    <a id="nomJeu" href ="index.php?view=accueil" >PACMAN</a>
+    <div id="blockLiens">
 
+<?php
+if (valider("connecte","SESSION")) {
+
+
+    if ($pseudo = valider("pseudo", "SESSION")) {
+        echo '<a class="lien" href="index.php?view=jouer">Jouer</a>';
+        echo '<a class="lien" href="index.php?view=profil">Profil</a>';
+    };
+}
+else{
+    echo '<a class="lien" href="index.php?view=connexion">Connexion</a>';
+    echo '<a class="lien" href="index.php?view=inscription">Inscription</a>';
+}
+
+?>
+        <a class="lien" href = "index.php?view=classement" > Classement</a>
+        <a class='lien' href = "index.php?view=commandes" > Commandes</a>
+
+    </div>
 
 <?php
 // Si l'utilisateur est connecté, on affiche le pseudo et un input déconnexion
@@ -51,7 +71,7 @@ if (valider("connecte","SESSION")) {
 
 else {
 
-    echo "<div id=\"message\">Vous n'êtes pas connecté...</div>";
+    echo "<a href='index.php?view=connexion' id=\"message\">Vous n'êtes pas connecté...</a>";
     echo "<img id=\"decu\" src=\"ressources/deçu.png\">";
 
 }

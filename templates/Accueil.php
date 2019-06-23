@@ -23,13 +23,12 @@ if (valider("connecte","SESSION")){
 
     // on ajoute un bouton jouer & profil
 
-    echo "<form method=\"get\" action=\"index.php?view=jouer\">";
-    echo '<button class="boutton" type=\"submit\">Jouer</button>';
-    echo '</form></br>';
+    echo "<a class='boutton' href=\"index.php?view=jouer\">Jouer</a>";
+    echo "</br></br>";
 
-    echo "<form method=\"get\" action=\"index.php?view=profil\">";
-    echo '<button class="boutton" type=\"submit\">Profil</button>';
-    echo '</form></br>';
+    echo "<a class='boutton' href=\"index.php?view=profil\">Profil</a>";
+    echo "</br></br>";
+
 
 }
 
@@ -37,13 +36,11 @@ else{
 
     // on ajoute un bouton connexion / s'inscrire
 
-    echo "<form method=\"get\" action=\"index.php?view=connexion\">";
-    echo '<button class="boutton" type=\"submit\">Connexion</button>';
-    echo '</form></br>';
+    echo "<a class='boutton' href=\"index.php?view=connexion\">Connexion</a>";
+    echo "</br></br>";
 
-    echo "<form method=\"get\" action=\"index.php?view=inscription\">";
-    echo '<button class="boutton" type=\"submit\">Inscription</button>';
-    echo '</form></br>';
+    echo "<a class='boutton' href=\"index.php?view=inscription\">Inscription</a>";
+    echo "</br></br>";
 
 
 }
@@ -53,14 +50,11 @@ else{
 // on affiche les boutons classement et commandes
 
 
-    echo "<form method=\"get\" action=\"index.php?view=classement\">";
-    echo '<button class="boutton" type=\"submit\">Classement</button>';
-    echo '</form></br>';
+    echo "<a class='boutton' href=\"index.php?view=classement\">Classement</a>";
+    echo "</br></br>";
 
-    echo "<form method=\"get\" action=\"index.php?view=commandes\">";
-    echo"<button class='boutton' type=\"submit\">Commandes</button>";
-    echo "</form></br>";
-
+    echo "<a class='boutton' href=\"index.php?view=commandes\">Commandes</a>";
+    echo "</br></br>";
 
 
 echo "</div>";

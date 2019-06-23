@@ -11,7 +11,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 
 <div class="listeBouttons">
-    <form action="controleur.php" method="GET">
+    <form action="../controleur.php" method="GET">
         Nom d'utilisateur
         </br>
 
@@ -22,11 +22,8 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
         <input class="textInp" type="password" name="passe" />
         </br>
         </br>
-        <div id="contenant">
             <input class="boutton" type="submit" name="action" value="Inscription" />
             <input class="boutton" type="submit" name="action" value="Connexion" />
-        </div>
-
     </form>
 </div>
 

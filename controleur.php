@@ -12,26 +12,16 @@ session_start();
 	{
 		ob_start ();
 
-		echo "Action = '$action' <br />";
+		echo "Action = '$action' <br/>";
 
-		// ATTENTION : le codage des caractères peut poser PB 
-		// si on utilise des actions comportant des accents... 
-		// A EVITER si on ne maitrise pas ce type de problématiques
-
-		//TODO: exercice 4
-		// Dans tous les cas, il faut etre logue... 
-		// Sauf si on veut se connecter (action == Connexion)
+		// ligne du dessus à enelever ?
 
 		if ($action != "Connexion") 
 			securiser("login");
 
 
-		// Un paramètre action a été soumis, on fait le boulot...
 		switch($action)
 		{
-			
-			// Connexion //////////////////////////////////////////////////
-
 
 			case 'Connexion' :
 				// On verifie la presence des champs login et passe

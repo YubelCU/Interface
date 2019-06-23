@@ -19,6 +19,14 @@ body{
 
 }
 
+#decu{
+	position:absolute;
+	max-width:10vw;
+	right:1vw;
+	top:1vw;
+
+}
+
 #banniere{
 	border-bottom: solid black;
 	position:relative;
@@ -108,3 +116,19 @@ body{
 	height:2vw;
 
 }
+
+#message{
+	text-align:center;
+	position:absolute;
+	width:25vw;
+	height:3.5vw;
+	font-family:funky;
+	font-size:2vw;
+	top:2.8vw;
+	right:10vw;
+	color:red;
+	font-weight: bolder;
+	border: 0.05vw solid red;
+	border-radius:1.5vw;
+}
+

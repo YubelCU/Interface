@@ -10,7 +10,7 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
 */
 
 
-	include_once "libs/maLibUtils.php";
+	include_once("libs/maLibUtils.php");
 
 	// Dans tous les cas, on affiche l'entete, 
 	// qui contient les balises de structure de la page, le logo, etc. 
@@ -26,14 +26,17 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
 	// et "0"
 
 	// S'il est vide, on charge la vue accueil par défaut
-	if (!$view) $view = "accueil"; 
+	if (!$view) $view = "accueil";
 
 	// Si le fichier existe, on renvoie vers celui-ci
 
-	if (file_exists("templates/$view.php"))
-		include("templates/$view.php");
 
-	else echo"<h1> Rien à afficher ! </h1>";
+	// le problème des mauvais headers arrive là...
+
+	if (file_exists("../interface/templates/$view.php"))
+		include("../interface/templates/$view.php");
+
+	//else echo"<h1> Rien à afficher ! </h1>";
 
 
 

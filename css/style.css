@@ -112,7 +112,7 @@ body{
 	vertical-align:middle;
 	position:relative;
 	padding:1vw;
-	margin:4vw 20vw;
+	margin:2vw 20vw;
 	text-align:center;
 	font-family: funky;
 	font-size:2vw;
@@ -139,12 +139,15 @@ body{
 }
 
 .textInp{
+	margin-top:1vw;
+	margin-bottom:0.5vw;
 	font-size:2vw;
 	border-radius:1vw;
 	border:0.05vw solid black;
 	width:18vw;
 	height:3vw;
 	padding:0vw;
+	text-align:center;
 
 }
 
@@ -162,5 +165,10 @@ body{
 	font-weight: bolder;
 	border: 0.05vw solid black;
 	border-radius:1.5vw;
+}
+
+#bouttonInscription{
+	font-size:1.5vw;
+	text-decoration: none;
 }
 

@@ -10,6 +10,7 @@ session_start();
 
 	if ($action = valider("action"))
 	{
+
 		ob_start ();
 
 		echo "Action = '$action' <br/>";
@@ -32,12 +33,13 @@ session_start();
 				{
 					// On verifie l'utilisateur, et on crée des variables de session si tout est OK
 					// Cf. maLibSecurisation
-					if (verifUser($login,$passe)) 
+					if (verifUser($login,$passe))
 						$qs = "?view=accueil";
 				}
 
-				// On redirigera vers la page index automatiquement
+
 			break;
+				//
 
 			// TODO : implémenter la déconnexion 
 

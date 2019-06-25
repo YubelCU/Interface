@@ -33,8 +33,7 @@ function verifUser($login,$password)
 	if ($id = verifUserBdd($login,$password)) {
 		$_SESSION["pseudo"] = $login; 
 		$_SESSION["idUser"] = $id; 
-		$_SESSION["heureConnexion"] = date("H:i:s"); 
-		$_SESSION["isAdmin"] = isAdmin($id); 
+		$_SESSION["heureConnexion"] = date("H:i:s");
 		$_SESSION["connecte"] = true;
 		return true;
 	} else return false;

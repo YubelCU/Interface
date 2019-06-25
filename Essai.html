@@ -2,6 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
     <title>Pacman</title>
+    <title>PacMan</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <!-- **** F I N **** H E A D **** -->
@@ -11,22 +12,37 @@
 <body>
 
 <div id="banniere">
-    <img id="logo" src="ressources/point-interrogation.jpg">
+    <img id="logo" src="ressources/pacman.jpg">
     <div id="nomJeu">PACMAN</div>
+    <div id="blockLiens">
+        <a class="lien" href="index.php?view=connexion">Connexion</a>
+        <a class="lien" href="index.php?view=inscription">Inscription</a>
+        <a class="lien" href="index.php?view=classement">Classement</a>
+        <a class='lien' href="index.php?view=commandes">Commandes</a>
+    </div>
 
-    <form method=\"get\" action=\"index.php?view=deconnexion\>
+    <div id='message'>Vous n'êtes pas connecté...</div>
+    <img id="decu" src="ressources/deçu.png">
+
+    <!--<form method=\"get\" action=\"index.php?view=deconnexion\>
         <button id='deconnexion' type=\"submit\">Deconnexion</button>
         <div id="nomUtilisateur">Nom</div>
-    </form>
+    </form>-->
 
 
 </div>
 
-<div id="listeBouttons">
+<div class="listeBouttons">
 
-    <form method=\"get\" action=\"index.php?view=deconnexion\>
-        <button id='deconnexion' type=\"submit\">Deconnexion</button>
-    </form>
+    <a class="boutton" href="index.php?view=connexion">Connexion</a>
+    </br></br>
+    <a class="boutton" href="index.php?view=inscription">Inscription</a>
+    </br></br>
+    <a class="boutton" href="index.php?view=classement">Classement</a>
+    </br></br>
+    <a class='boutton' href="index.php?view=commandes">Commandes</a>
+    </br></br>
+
 
 
 </div>

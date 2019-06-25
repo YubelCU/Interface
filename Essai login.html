@@ -1,0 +1,53 @@
+<!-- **** H E A D **** -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+    <title>PacMan</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<!-- **** F I N **** H E A D **** -->
+
+
+<!-- **** B O D Y **** -->
+<body>
+
+<div id="banniere">
+    <img id="logo" src="ressources/pacman.jpg">
+    <div id="nomJeu">PACMAN</div>
+
+    <form method=\"get\" action=\"index.php?view=deconnexion\>
+        <button id='deconnexion' type=\"submit\">Deconnexion</button>
+        <div id="nomUtilisateur">Nom</div>
+    </form>
+
+
+</div>
+
+
+<div class="listeBouttons">
+    <form action="controleur.php" method="GET">
+        Nom d'utilisateur
+        </br>
+
+        <input class="textInp" type="text" name="login" />
+        </br>
+        Mot de passe
+        </br>
+        <input class="textInp" type="password" name="passe" />
+        </br>
+        </br>
+        <div id="contenant">
+            <input class="boutton" type="submit" name="action" value="Inscription" />
+            <input class="boutton" type="submit" name="action" value="Connexion" />
+        </div>
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+</body>

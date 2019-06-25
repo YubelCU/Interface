@@ -10,23 +10,17 @@ session_start();
 
 	if ($action = valider("action"))
 	{
+
 		ob_start ();
 
-		echo "Action = '$action' <br />";
+		echo "Action = '$action' <br/>";
 
-		// ATTENTION : le codage des caractères peut poser PB 
-		// si on utilise des actions comportant des accents... 
-		// A EVITER si on ne maitrise pas ce type de problématiques
-
-		//TODO: exercice 4
-		// Dans tous les cas, il faut etre logue... 
-		// Sauf si on veut se connecter (action == Connexion)
+		// ligne du dessus à enelever ?
 
 		if ($action != "Connexion") 
 			securiser("login");
 
 
-		// Un paramètre action a été soumis, on fait le boulot...
 		switch($action)
 		{
 
@@ -53,6 +47,26 @@ session_start();
             case 'commandes' :
             //redirige vers la page commandes
                  $addArgs = "?view=commandes";
+            break;
+
+            case 'Connexion' :
+                // On verifie la presence des champs login et passe
+                $qs = "?view=connexion";
+
+                if ($login = valider("login"))
+                if ($passe = valider("passe"))
+                {
+                    // On verifie l'utilisateur, et on crée des variables de session si tout est OK
+                    // Cf. maLibSecurisation
+                    if (verifUser($login,$passe))
+                        $qs = "?view=accueil";
+                }
+            break;
+
+
+            case 'Deconnexion' :
+                session_destroy();
+                $qs = "?view=connexion";
             break;
 		}
 

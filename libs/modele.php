@@ -25,6 +25,16 @@ function listerParties($numId){
 
 }
 
+/*Page connexion, ID BDD ... */
+
+function verifUserBdd($login,$passe)
+{
+	// Vérifie l'identité d'un utilisateur
+	// dont les identifiants sont passes en paramètre
+	// renvoie faux si user inconnu
+	// renvoie l'id de l'utilisateur si succès
+
+	$SQL = "SELECT id FROM profil WHERE pseudo='$login' AND passe='$passe'";
 
 
 /*Statistique pour la page profil*/

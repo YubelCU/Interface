@@ -14,25 +14,25 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
  echo " <script src='js/script.js'></script>";
 
 
- $idUtilisateur = "0"; //modifier paramètre par l'id de l'utilisateur connecté
+ //$idUtilisateur = "0"; modifier paramètre par l'id de l'utilisateur connecté
 
 
 //Si l'utilisateur n'est pas connecté mais arrive à cette page, on lui propose d'aller se connecter
-//if (valider("connecte","SESSION") == false)
-//{
-    //echo "<div id='profilConnexion'>";
-    //echo "<h1> Connecte toi pour avoir accès à ton profil </h1>";
+if (valider("connecte","SESSION") == false)
+{
+    echo "<div id='profilConnexion'>";
+    echo "<h1> Connecte toi pour avoir accès à ton profil </h1>";
 
-    //mkForm("controleur.php");
-    //mkInput("submit","action","pageLogin");
-    //endForm();
-    //echo "</div>";
-//}
+    mkForm("controleur.php");
+    mkInput("submit","action","pageLogin");
+    endForm();
+    echo "</div>";
+}
 
 
 //Si l'utlisateur est connecté, on affiche les données qui le concernent
-//if (valider("connecte","SESSION"))
-//{
+if (valider("connecte","SESSION"))
+{
     //$idUtilisateur = $_SESSION["id"];
     echo "
         <div id='profilPersonnage' class='profil'>
@@ -107,6 +107,6 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
            </div>
      ";
-//}
+}
 ?>
 

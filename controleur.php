@@ -44,6 +44,16 @@ session_start();
 		    //redirige vers la page classement
 		        $addArgs = "?view=classement";
 		    break;
+
+		    case 'profil' :
+            //redirige vers la page profil
+            	$addArgs = "?view=profil";
+            break;
+
+            case 'commandes' :
+            //redirige vers la page commandes
+                 $addArgs = "?view=commandes";
+            break;
 		}
 
 	}

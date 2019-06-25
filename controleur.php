@@ -45,7 +45,7 @@ session_start();
 
 			case 'logout' : 
 			case 'Logout' : 
-			case 'deconnexion' : 
+			case 'Deconnexion' :
 				session_destroy();
 				$qs = "?view=connexion";
 			break; 

@@ -62,8 +62,8 @@ if (valider("connecte","SESSION")) {
     // si l'utilisateur est connecté, pas besoin de if car on sait qu'il a un pseudo
 
     if ($pseudo = valider("pseudo", "SESSION")) {
-        echo "<form method=\"get\" action=\"index.php?view=deconnexion\">";
-        echo "<button id='deconnexion' type=\"submit\">Deconnexion</button>";
+        echo "<form method=\"get\" action=\"./controleur.php\">";
+        echo "<button id='deconnexion' name ='action' value='Deconnexion' type=\"submit\">Deconnexion</button>";
         echo "<div id='nomUtilisateur'>$pseudo</div>";
         echo "</form>";
     };

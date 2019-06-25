@@ -72,7 +72,7 @@ function verifUserBdd($login,$passe)
 	// renvoie faux si user inconnu
 	// renvoie l'id de l'utilisateur si succès
 	
-	$SQL = "SELECT id FROM users WHERE pseudo='$login' AND passe='$passe'"; 
+	$SQL = "SELECT id FROM profil WHERE pseudo='$login' AND passe='$passe'";
 
 /*
 	$rs = SQLSelect($SQL); 

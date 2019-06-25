@@ -27,7 +27,6 @@ body{
 	font-size:5vw;
 
 
-
 }
 #deconnexion{
 
@@ -77,21 +76,37 @@ body{
 
 /*Style pour la page commande*/
 
-.CommandesTitre{
-	text-align: center;
-}
-
 .Commandes{
-	border : solid black 1px;
-	padding : 5px;
-	margin : 10px;
 	text-align : center;
+	display : inline-block;
+	position : absolute;
+	height : 37%;
+	border: outset black 2px;
+	border-radius : 10px;
 }
 
 #formCommandes{
+	right : 13px;
+	width : 35%;
+	top : 40%;
+	vertical-align : center;
 	text-align : center;
-	margin : 20px;
 }
+
+#commandesPacman{
+	left : 13px;
+	width : 60%;
+	top : 18%;
+
+}
+
+#commandesFantome{
+	left: 13px;
+	width : 60%;
+	bottom : 5%;
+
+}
+
 
 /*Style pour la page profil */
 
@@ -103,27 +118,30 @@ body{
 #profilPersonnage{
 	left : 13px;
 	width : 60%;
-	top : 10%;
+	top : 18%;
+	text-align:left
 }
 
 #profilBtn{
 	right : 13px;
 	width : 35%;
-	top : 10%;
+	top : 18%;
+	vertical-align : center;
+	text-align : center;
 
 }
 
 #profilHistorique{
 	left: 13px;
 	width : 60%;
-	bottom : 10%;
+	bottom : 5%;
 
 }
 
 #profilStats{
 	right:13px;
 	width : 35%;
-	bottom : 10%;
+	bottom : 5%;
 
 }
 
@@ -132,9 +150,84 @@ body{
 	text-align : center;
 	display : inline-block;
 	position : absolute;
+	height : 37%;
+	border: outset black 2px;
+	border-radius : 10px;
+}
+
+.profilTitre{
+	border-bottom : dashed black 2px;
+	margin-left : 10px;
+	margin-right : 10px;
+	padding-bottom : 10px;
+	text-align:center;
+
+
+}
+
+
+.historique{
+	border-bottom : dotted grey 1px;
+	border-top : dotted grey 1px;
+	margin-bottom : 5px;
+	padding-bottom : 5px;
+	padding-top : 5px;
+	margin-left : 10px;
+	margin-right : 10px;
+	background-color : lightgrey;
+
+}
+
+#currentColor{
+	position : absolute;
+	width : 20%;
+	border : solid black 1px;
+	margin-left:10%;;
+}
+
+.vu{
+	position : relative;
+	border:solid black 1px;
+	left : 42%;
+	margin-right : 7%;
+	width : 9%;
+
+}
+
+
+
+/*style pour la page Classement */
+
+#classementGeneral{
+	left : 13px;
+	width : 60%;
+	top : 18%;
+}
+
+#classementBtn{
+	right : 13px;
+	width : 35%;
+	top : 18%;
+	vertical-align : center;
+}
+
+#classementPacman{
+	left: 13px;
+	width : 47.5%;
+	bottom : 5%;
+}
+
+#classementFantomes{
+	right:13px;
+	width : 47.5%;
+	bottom : 5%;
+}
+
+.classement{
+	text-align : center;
+	display : inline-block;
+	position : absolute;
 	height : 38%;
-
-
-	border: solid black 1px;
-
+	border: outset black 2px;
+	border-radius : 10px;
 }

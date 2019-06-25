@@ -33,7 +33,7 @@ if (valider("connecte","SESSION") == false)
 //Si l'utlisateur est connecté, on affiche les données qui le concernent
 if (valider("connecte","SESSION"))
 {
-    //$idUtilisateur = $_SESSION["id"];
+    $idUtilisateur = $_SESSION["id"];
     echo "
         <div id='profilPersonnage' class='profil'>
             <h1 class='profilTitre'>Ton personnage</h1>

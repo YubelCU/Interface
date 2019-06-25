@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 22 juin 2019 à 13:30
+-- Généré le :  mar. 25 juin 2019 à 14:55
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `projetpacman`
+-- Base de données :  `pacman`
 --
 
 -- --------------------------------------------------------
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `historique` (
   `idPacman` varchar(255) NOT NULL DEFAULT ';',
   `idGhost` varchar(255) NOT NULL DEFAULT ';',
   `date` date NOT NULL,
+  `score` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -42,8 +43,11 @@ CREATE TABLE IF NOT EXISTS `historique` (
 -- Déchargement des données de la table `historique`
 --
 
-INSERT INTO `historique` (`id`, `victoire`, `idPacman`, `idGhost`, `date`) VALUES
-(0, 1, '1', '0,2;', '2019-06-19');
+INSERT INTO `historique` (`id`, `victoire`, `idPacman`, `idGhost`, `date`, `score`) VALUES
+(0, 1, '1', '0,2', '2019-06-19', '15,10,9'),
+(1, 0, '2', '0,1', '2019-06-22', '10,12,5'),
+(3, 1, '1', '2', '2019-06-23', '20,15'),
+(2, 0, '2,3', '0,1', '2019-06-23', '5,10,19,15');
 
 -- --------------------------------------------------------
 
@@ -65,8 +69,10 @@ CREATE TABLE IF NOT EXISTS `profil` (
 --
 
 INSERT INTO `profil` (`id`, `pseudo`, `passe`, `apparence`) VALUES
-(0, 'GAB', 'gab', NULL),
-(1, 'jules', 'JULES', NULL);
+(0, 'GAB', 'gab', 'rouge'),
+(1, 'jules', 'JULES', NULL),
+(3, 'Alexandre', 'Cessac', NULL),
+(2, 'Arthur', 'Colas', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

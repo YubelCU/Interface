@@ -11,8 +11,11 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
  include_once("libs/maLibUtils.php");
  include_once("libs/maLibForms.php");
  include_once("libs/LibJules.php");
+ echo " <script src='js/script.js'></script>";
+
 
  $idUtilisateur = "0"; //modifier paramètre par l'id de l'utilisateur connecté
+
 
 //Si l'utilisateur n'est pas connecté mais arrive à cette page, on lui propose d'aller se connecter
 //if (valider("connecte","SESSION") == false)
@@ -30,12 +33,27 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 //Si l'utlisateur est connecté, on affiche les données qui le concernent
 //if (valider("connecte","SESSION"))
 //{
+    //$idUtilisateur = $_SESSION["id"];
     echo "
         <div id='profilPersonnage' class='profil'>
-                <h1>Ton personnage</h1>
-            </div>
+            <h1 class='profilTitre'>Ton personnage</h1>
 
-            <div id='profilBtn' class='profil'>
+    ";
+    $couleur = apparence($idUtilisateur);
+    currentColor($couleur);
+    echo "
+            <img id='vuBleu' class='vu' src='ressources/bleu.png' alt='bleu' onclick='changerCouleur();'/>
+            <img id='vuRouge' class='vu' src='ressources/rouge.png' alt='rouge'/>
+            <img id='vuJaune' class='vu' src='ressources/jaune.png' alt='jaune'/>
+            <br/>
+            <img id='vuVert' class='vu' src='ressources/vert.png' alt='vert'/>
+            <img id='vuGris' class='vu' src='ressources/gris.png' alt='gris'/>
+            <img id='vuRose' class='vu' src='ressources/rose.png' alt='rose'/>
+
+
+        </div>
+
+        <div id='profilBtn' class='profil'>
 
     ";
     echo "<br/>";
@@ -47,17 +65,18 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
     echo "<br/>";
     echo "<br/>";
     mkInput("submit","action","classement");
+    echo "<br/>";
+    echo "<br/>";
+    echo "<br/>";
+    mkInput("submit","action","commandes");
     endForm();
-    echo "<br/>";
-    echo "<br/>";
-    echo "<br/>";
     echo "
        </div>
 
            <br/>
 
            <div id='profilHistorique' class='profil'>
-               <h1>Historique</h1>
+               <h1 class='profilTitre'>Historique</h1>
 
     ";
 
@@ -67,7 +86,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
            </div>
 
            <div id='profilStats' class='profil'>
-               <h1>Tes statistiques</h1>
+               <h1 class='profilTitre'>Tes statistiques</h1>
     ";
     echo "Nombres de parties jouées : ";
     echo NbParties($idUtilisateur);

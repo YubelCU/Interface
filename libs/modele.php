@@ -29,12 +29,16 @@ function listerParties($numId){
 
 function verifUserBdd($login,$passe)
 {
-	// Vérifie l'identité d'un utilisateur
-	// dont les identifiants sont passes en paramètre
-	// renvoie faux si user inconnu
-	// renvoie l'id de l'utilisateur si succès
+    // Vérifie l'identité d'un utilisateur
+    // dont les identifiants sont passes en paramètre
+    // renvoie faux si user inconnu
+    // renvoie l'id de l'utilisateur si succès
 
-	$SQL = "SELECT id FROM profil WHERE pseudo='$login' AND passe='$passe'";
+    $SQL = "SELECT id FROM profil WHERE pseudo='$login' AND passe='$passe'";
+
+
+    return SQLGetChamp($SQL);
+}
 
 
 /*Statistique pour la page profil*/
@@ -98,4 +102,5 @@ function idJoueur()
     $SQL = "SELECT id,pseudo FROM profil";
     return parcoursRs(SQLSelect($SQL));
 }
+
 ?>

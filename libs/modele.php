@@ -25,6 +25,8 @@ function listerParties($numId){
 
 }
 
+
+
 /*Statistique pour la page profil*/
 
 function NbParties($numId){
@@ -57,6 +59,33 @@ function victoires($numId){
 
 }
 
+/*Apparence pour la page profil*/
 
+function apparence($numId){
 
+    $SQL="SELECT apparence FROM profil WHERE id=".$numId;
+    return SQLGetChamp($SQL);
+}
+
+function updateApparence($couleur,$numId)
+{
+    $SQL = "UPDATE profil SET apparence=".$couleur."WHERE id=".$numId;
+    SQLUpdate($SQL);
+}
+
+/*Page Classement */
+
+//La fonction renvoie toutes les parties présentent dans la base de données
+function listerPartiesGlobal(){
+
+    $SQL="SELECT * FROM historique";
+    return parcoursRs(SQLSelect($SQL));
+}
+
+//Renvoie un tableau contenant la liste des joueurs avec leur id
+function idJoueur()
+{
+    $SQL = "SELECT id,pseudo FROM profil";
+    return parcoursRs(SQLSelect($SQL));
+}
 ?>
